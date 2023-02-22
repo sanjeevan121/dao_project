@@ -242,7 +242,7 @@ contract DAO is ReentrancyGuard,AccessControl{
                 //setupRole comes from AccessControl.sol
                 //if total contribution > 1 eth, person is both stakeholder and contributor
                 //otherwise he's just contributor
-                _setupRole(STAKEHOLDER_ROLE, msg.sender);
+                _grantRole(STAKEHOLDER_ROLE, msg.sender);
              
             }
              //add only amt for contributor
